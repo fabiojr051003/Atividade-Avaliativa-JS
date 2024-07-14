@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma e Média de 5 Números</title>
+</head>
+<body>
+    <h1>Informe 5 Números</h1>
+    <div id="result"></div>
+    <script>
+        let numeros = [];
+        for (let i = 0; i < 5; i++) {
+            let numero = parseFloat(prompt("Digite um número:"));
+            numeros.push(numero);
+        }
+        let soma = numeros.reduce((acc, curr) => acc + curr, 0);
+        let media = soma / numeros.length;
+        document.getElementById('result').innerText = "A soma dos números é: " + soma + "\nA média dos números é: " + media;
+    </script>
+</body>
+</html>

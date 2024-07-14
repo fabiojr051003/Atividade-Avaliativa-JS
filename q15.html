@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aritmética das Notas dos Alunos</title>
+</head>
+<body>
+    <h1>Média Aritmética das Notas dos Alunos</h1>
+    <div id="result"></div>
+    <script>
+        let resultDiv = document.getElementById('result');
+
+        while (true) {
+            let codigo = prompt("Digite o código do aluno (0 para sair):");
+            if (codigo === '0') break;
+
+            let nota1 = parseFloat(prompt("Digite a 1ª nota:"));
+            let nota2 = parseFloat(prompt("Digite a 2ª nota:"));
+            let nota3 = parseFloat(prompt("Digite a 3ª nota:"));
+            let media = (nota1 + nota2 + nota3) / 3;
+
+            resultDiv.innerHTML += "Código do Aluno: " + codigo + " - Média: " + media.toFixed(2) + "<br>";
+        }
+    </script>
+</body>
+</html>

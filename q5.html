@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior de 5 Números</title>
+</head>
+<body>
+    <h1>O maior de 5 Números</h1>
+    <div id="result"></div>
+    <script>
+        let numeros = [];
+        for (let i = 0; i < 5; i++) {
+            let numero = parseFloat(prompt("Digite um número:"));
+            numeros.push(numero);
+        }
+        let maior = Math.max(...numeros);
+        document.getElementById('result').innerText = "O maior número é: " + maior;
+    </script>
+</body>
+</html>

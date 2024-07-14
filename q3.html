@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações Cadastradas</title>
+</head>
+<body>
+    <h1>Cadastro de Informações</h1>
+    <script>
+        let nome, idade, salario, sexo, estadoCivil;
+
+        // Validação do nome
+        do {
+            nome = prompt("Digite seu nome (mais de 3 caracteres):");
+            if (nome.length <= 3) {
+                alert("Nome inválido. Deve ter mais de 3 caracteres.");
+            }
+        } while (nome.length <= 3);
+
+        // Validação da idade
+        do {
+            idade = prompt("Digite sua idade (entre 0 e 150):");
+            idade = parseInt(idade);
+            if (idade < 0 || idade > 150 || isNaN(idade)) {
+                alert("Idade inválida. Deve estar entre 0 e 150.");
+            }
+        } while (idade < 0 || idade > 150 || isNaN(idade));
+
+        // Validação do salário
+        do {
+            salario = prompt("Digite seu salário (maior que zero):");
+            salario = parseFloat(salario);
+            if (salario <= 0 || isNaN(salario)) {
+                alert("Salário inválido. Deve ser maior que zero.");
+            }
+        } while (salario <= 0 || isNaN(salario));
+
+        // Validação do sexo
+        do {
+            sexo = prompt("Digite seu sexo (f para feminino, m para masculino):").toLowerCase();
+            if (sexo !== 'f' && sexo !== 'm') {
+                alert("Sexo inválido. Deve ser 'f' ou 'm'.");
+            }
+        } while (sexo !== 'f' && sexo !== 'm');
+
+        // Validação do estado civil
+        do {
+            estadoCivil = prompt("Digite seu estado civil (s, c, v, d):").toLowerCase();
+            if (!['s', 'c', 'v', 'd'].includes(estadoCivil)) {
+                alert("Estado civil inválido. Deve ser 's', 'c', 'v' ou 'd'.");
+            }
+        } while (!['s', 'c', 'v', 'd'].includes(estadoCivil));
+
+        alert("Informações válidas. Cadastro completo!");
+    </script>
+</body>
+</html>
+

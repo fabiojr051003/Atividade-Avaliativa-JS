@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idades de Dez Pessoas</title>
+</head>
+<body>
+    <h1>Idades de Dez Pessoas</h1>
+    <div id="result"></div>
+    <script>
+        let maior18 = 0;
+        for (let i = 1; i <= 10; i++) {
+            let idade = parseInt(prompt("Digite a idade da pessoa " + i + ":"));
+            if (idade >= 18) {
+                maior18++;
+            }
+        }
+        document.getElementById('result').innerText = "Quantidade de pessoas com idade maior ou igual a 18 anos: " + maior18;
+    </script>
+</body>
+</html>

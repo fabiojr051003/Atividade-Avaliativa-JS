@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Números Primos</title>
+</head>
+<body>
+    <h1>Verificador de Números Primos</h1>
+    Número para teste: <input id="num" type="number" /> <br />
+    <button onclick="primo()">Testar</button><br />
+    Resultado: <div id="resposta"></div>
+
+    <script type="text/javascript">
+        function primo() {
+            var numero = parseInt(document.getElementById('num').value);
+            var resposta = document.getElementById('resposta');
+            var divisores = [];
+            var totalDivisores = 0;
+
+            for (var count = 1; count <= numero; count++) {
+                if (numero % count == 0) {
+                    divisores.push(count);
+                    totalDivisores++;
+                }
+            }
+
+            if (totalDivisores == 2) {
+                resposta.innerHTML = 'É primo';
+            } else {
+                resposta.innerHTML = 'Não é primo. Divisível por: ' + divisores.join(', ');
+            }
+        }
+    </script>
+</body>
+</html>

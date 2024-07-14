@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+</head>
+<body>
+    <h1>Cadastro de Usuário</h1>
+    <script>
+        let usuario, senha;
+        do {
+            usuario = prompt("Digite o nome de usuário:");
+            senha = prompt("Digite a senha:");
+            if (usuario === senha) {
+                alert("Erro: a senha não pode ser igual ao nome de usuário. Tente novamente.");
+            }
+        } while (usuario === senha);
+        alert("Cadastro realizado com sucesso!");
+    </script>
+</body>
+</html>

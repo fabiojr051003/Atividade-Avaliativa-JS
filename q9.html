@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números e Soma no Intervalo</title>
+</head>
+<body>
+    <h1>Gerar Números e Soma no Intervalo</h1>
+    <div id="result"></div>
+    <script>
+        let num1 = parseInt(prompt("Digite o primeiro número inteiro:"));
+        let num2 = parseInt(prompt("Digite o segundo número inteiro:"));
+
+        let menor = Math.min(num1, num2);
+        let maior = Math.max(num1, num2);
+
+        let resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = "Números no intervalo entre " + menor + " e " + maior + ":<br>";
+
+        let soma = 0;
+        for (let i = menor + 1; i < maior; i++) {
+            resultDiv.innerHTML += i + ' ';
+            soma += i;
+        }
+
+        resultDiv.innerHTML += "<br>Soma dos números no intervalo: " + soma;
+    </script>
+</body>
+</html>
